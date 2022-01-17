@@ -104,3 +104,31 @@ xdg-open $f_pdf
 
 rm $f_pdf
 rm $f_csv
+
+  #========================================
+  #Rapporto_sorveglianza_vaccini_COVID-19_9
+  #========================================
+
+  # pdf aifa, non ho trovato un repository github
+  # modificare il numero ogni volta
+
+name=Rapporto_sorveglianza_vaccini_COVID-19_9
+
+f_csv=$name.csv
+f_pdf=$name.pdf
+
+if [ -f f_csv ]; then
+  rm f_csv
+fi
+
+if [ -f f_pdf ]; then
+  rm f_pdf
+fi
+
+wget -q https://www.aifa.gov.it/documents/20142/1315190/Rapporto_sorveglianza_vaccini_COVID-19_9.pdf
+
+xdg-open $f_pdf
+
+rm $f_pdf
+rm $f_csv
+
