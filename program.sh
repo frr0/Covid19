@@ -46,7 +46,7 @@ fi
 
 wget -q https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-province/dpc-covid19-ita-province.csv
 
-pandoc -V geometry:"paperwidth=1000mm, paperheight=200mm, top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm" -o $f_pdf $f_csv +RTS -Ksize -RTS
+pandoc -V geometry:"paperwidth=1100mm, paperheight=200mm, top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm" -o $f_pdf $f_csv +RTS -Ksize -RTS
 
 xdg-open $f_pdf
 
@@ -114,12 +114,7 @@ rm $f_csv
 
 name=Rapporto_sorveglianza_vaccini_COVID-19_9
 
-f_csv=$name.csv
 f_pdf=$name.pdf
-
-if [ -f f_csv ]; then
-  rm f_csv
-fi
 
 if [ -f f_pdf ]; then
   rm f_pdf
@@ -130,5 +125,4 @@ wget -q https://www.aifa.gov.it/documents/20142/1315190/Rapporto_sorveglianza_va
 xdg-open $f_pdf
 
 rm $f_pdf
-rm $f_csv
 
