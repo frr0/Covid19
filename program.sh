@@ -18,7 +18,7 @@ if [ -f f_pdf ]; then
   rm f_pdf
 fi
 
-wget -q https://raw.githubusercontent.com/maxdevblock/covid_iss_vaccini_reports/main/reports_iss_vaccini.csv
+wget -q https://raw.githubusercontent.com/italia/covid19-opendata-vaccini/master/dati/somministrazioni-vaccini-latest.csv
 
 pandoc -V geometry:"paperwidth=500mm, paperheight=200mm, top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm" -o $f_pdf $f_csv +RTS -Ksize -RTS
 
@@ -44,7 +44,7 @@ if [ -f f_pdf ]; then
   rm f_pdf
 fi
 
-wget -q https://raw.githubusercontent.com/maxdevblock/covid_iss_vaccini_reports/main/reports_iss_vaccini.csv
+wget -q https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-province/dpc-covid19-ita-province.csv
 
 pandoc -V geometry:"paperwidth=1000mm, paperheight=200mm, top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm" -o $f_pdf $f_csv +RTS -Ksize -RTS
 
