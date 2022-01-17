@@ -1,4 +1,3 @@
-
 #!/bin/sh
 
   #===================================
@@ -125,4 +124,3 @@ wget -q https://www.aifa.gov.it/documents/20142/1315190/Rapporto_sorveglianza_va
 xdg-open $f_pdf
 
 rm $f_pdf
-
